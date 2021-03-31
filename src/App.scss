@@ -24,4 +24,6 @@ time, mark, audio, video {
 
 .App {
   background-color: $white;
+  display: flex;
+  flex-direction: column;
 }

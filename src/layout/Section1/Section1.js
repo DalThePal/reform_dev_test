@@ -45,9 +45,8 @@ const Section1 = (props) => {
   const carAnimation = () => {
     gsap.to('#one > .car-container', {
       duration: 0.5,
-      opacity: 1,
       left: '0px'
-    })
+    });
   }
 
   return (
