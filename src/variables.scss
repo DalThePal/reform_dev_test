@@ -1,0 +1,41 @@
+$white: #FFFFFF;
+$yellow: #FBC843;
+$gray: #414A69;
+
+
+@font-face {
+  font-family: Bebas Neue;
+  src: url("./assets/fonts/BebasNeue-Regular.woff") format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Bebas Neue;
+  src: url("./assets/fonts/BebasNeue-Bold.woff") format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Bebas Neue;
+  src: url("./assets/fonts/BebasNeue-Light.woff") format('woff');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Eina03;
+  src: url("./assets/fonts/Eina03-Light.woff") format('woff');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Eina03;
+  src: url("./assets/fonts/Eina03-Regular.woff") format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Eina03;
+  src: url("./assets/fonts/Eina03-Bold.woff") format('woff');
+  font-weight: bold;
+}
+
