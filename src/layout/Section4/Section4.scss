@@ -27,6 +27,8 @@ section#four {
       height: 725px;
       width: 338px;
       transform: translateY(-50%);
+      box-shadow: 14px 18px 29px 11px rgba(0,0,0,0.28);
+      border-radius: 35px;
     }
   }
 
@@ -49,7 +51,7 @@ section#four {
   }
 }
 
-@media(max-width: 900px) {
+@media(max-width: 1100px) {
   section#four { 
     padding: 200px 19px 0px 19px;
     width: 100%;
@@ -74,7 +76,8 @@ section#four {
         opacity: 1;
         height: 80%;
         width: auto;
-        top: 50%
+        top: 50%;
+        border-radius: 20px;
       }
     }
   }
