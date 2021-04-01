@@ -12,6 +12,8 @@ import './Section1.scss';
 const Section1 = (props) => {
 
   useEffect(() => {
+    gsap.set('#one > .left > .car-container', {clearProps:"all"});
+
     if (!props.mobile) {
       backgroundAnimation();
       carAnimation();
@@ -49,9 +51,11 @@ const Section1 = (props) => {
   }
 
   const carAnimation = () => {
-    gsap.to('#one > .left > .car-container', {
+    gsap.fromTo('#one > .left > .car-container', {
+      left: '-100%'
+    }, {
       duration: 0.5,
-      left: '0px'
+      left: '0px',
     });
   }
   
