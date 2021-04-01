@@ -39,7 +39,7 @@ const Section6 = (props) => {
   useEffect(() => {
     if (!props.mobile) {
       gsap.to('#six > .left', {
-        duration: 0.5,
+        duration: 1,
         width: '50%',
         scrollTrigger: '#six > .left > .dude',
         onComplete: () => {

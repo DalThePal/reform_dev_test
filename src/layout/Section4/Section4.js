@@ -41,7 +41,7 @@ const Section4 = (props) => {
   useEffect(() => {
     if (!props.mobile) {
       gsap.to('#four > .left', {
-        duration: 0.5,
+        duration: 1,
         width: '40%',
         scrollTrigger: '#four > .left > .phone',
         onComplete: () => {

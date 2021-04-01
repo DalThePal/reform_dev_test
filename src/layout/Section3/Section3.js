@@ -38,7 +38,7 @@ const Section3 = (props) => {
   useEffect(() => {
     if (!props.mobile) {
       gsap.to('#three > .left > h2', {
-        duration: 0.5,
+        duration: 1,
         top: '0px',
         scrollTrigger: '#three > .left > h2',
         display: 'block',
@@ -47,7 +47,7 @@ const Section3 = (props) => {
         }
       });
       gsap.to('#three > .right', {
-        duration: 0.5,
+        duration: 1,
         width: '60%',
         scrollTrigger: '#three > .left > h2',
         onComplete: () => {

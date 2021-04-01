@@ -115,7 +115,7 @@ const Section2 = (props) => {
   useEffect(() => {
     if (!props.mobile) {
       gsap.to('#two > .left', {
-        duration: 0.5,
+        duration: 1,
         width: '40%',
         scrollTrigger: '#two > .left',
         onComplete: () => {

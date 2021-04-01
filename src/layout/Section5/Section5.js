@@ -32,7 +32,7 @@ const Section5 = (props) => {
 
   const cardAnimation = (index) => {
     gsap.to(`.card-${index}`, {
-      duration: 0.5,
+      duration: 1,
       opacity: 1,
       top: '0px',
       onComplete: () => {
@@ -48,7 +48,7 @@ const Section5 = (props) => {
   useEffect(() => {
     if (!props.mobile) {
       gsap.to('.card-0', {
-        duration: 0.5,
+        duration: 1,
         opacity: 1,
         top: '0px',
         scrollTrigger: '.card-0',
