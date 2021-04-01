@@ -66,3 +66,18 @@ section#five {
     }
   }
 }
+
+@media(min-width: 701px) and (max-width: 1100px) {
+  section#five { 
+    padding: 200px 0px 100px 0px;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+
+    .card {
+      opacity: 1;
+      top: unset;
+      margin-bottom: 20px;
+    }
+  }
+}
