@@ -13,7 +13,7 @@ import Footer   from './layout/Footer';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  let mobile = window.innerWidth < 1024 ? true : false;
+  let mobile = window.innerWidth < 1025 ? true : false;
 
   if (loading) {
     return (

@@ -6,6 +6,7 @@ import './Section6.scss';
 
 import dude from '../../assets/images/dude.png';
 import car  from '../../assets/images/car1_better_resolution.png';
+import arrow from '../../assets/images/arrow.svg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +62,7 @@ const Section6 = (props) => {
         <p>“With Eleanor I was able to drive 2 of my dream cars this year!  The process is always easy and affordable!”</p>
         <span>Alex Bateman, Interface Designer</span>
         <hr/>
-        <span className="available">Available On the App</span>
+        <span className="available">Available On the App <img className="arrow" src={arrow}/></span>
       </div>
     </section>
   );

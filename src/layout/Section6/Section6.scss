@@ -67,9 +67,8 @@ section#six {
       align-items: center;
       font-weight: bold;
 
-      &::after {
-        margin-left: 50px;
-        content: url('../../assets/images/arrow.svg');
+      img {
+        margin-left: 4vw;
       }
     }
     
@@ -79,7 +78,7 @@ section#six {
   }
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1025px) {
   section#six { 
     padding: 0px 19px 50px 19px;
     flex-direction: column;
@@ -96,10 +95,19 @@ section#six {
         line-height: 48px;
         letter-spacing: -0.217059px;
       }
+      span {
+        font-size: 2.4vw;
+        margin: 3vw 0;
+      }
       .available {
-        margin-top: 0px;
+        font-size: 4vw;
         line-height: 25px;
-        margin-bottom: 30px;
+        margin: 4vw 0;
+
+        img {
+          width: 6vw;
+          transform: translateY(10%);
+        }
       }
     }
 

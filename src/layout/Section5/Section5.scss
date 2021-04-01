@@ -42,7 +42,7 @@ section#five {
   }
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1025px) {
   section#five { 
     padding: 100px 0px;
     width: 100%;
@@ -54,7 +54,7 @@ section#five {
       top: unset;
       margin-bottom: 20px;
       width: 100%;
-      height: 400px;
+      height: 80vw;
       padding-top: 12vw;
       padding-bottom: 12vw;
 
@@ -73,6 +73,10 @@ section#five {
 
       h6 {
         font-size: 8vw;
+      }
+      p {
+        font-size: 4vw;
+        line-height: 4vw;
       }
     }
   }
