@@ -46,10 +46,13 @@ const Section3 = (props) => {
           textAnimation();
         }
       });
-      gsap.to('#three > .right', {
+      gsap.fromTo('#three > .right', {
+        width: '0%'
+      }, {
         duration: 1,
         width: '60%',
         scrollTrigger: '#three > .left > h2',
+        clearProps: "all",
         onComplete: () => {
           carAnimation();
           phoneAnimation();

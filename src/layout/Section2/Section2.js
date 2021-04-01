@@ -81,7 +81,7 @@ const Section2 = (props) => {
     gsap.to(`.image-${index}`, {
       duration: 0.5,
       opacity: 0,
-      left: '-200%'
+      left: '-200%',
     });
   }
 
@@ -108,16 +108,20 @@ const Section2 = (props) => {
   const arrowAnimation = () => {
     gsap.to('.arrow-container', {
       duration: 0.5,
-      opacity: 1
+      opacity: 1,
     });
   }
   
   useEffect(() => {
+
     if (!props.mobile) {
-      gsap.to('#two > .left', {
+      gsap.fromTo('#two > .left', {
+        width: '0%'
+      }, {
         duration: 1,
         width: '40%',
         scrollTrigger: '#two > .left',
+        clearProps: "all",
         onComplete: () => {
           newCarAnimation(carIndex);
           arrowAnimation();

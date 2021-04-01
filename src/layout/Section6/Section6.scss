@@ -7,7 +7,7 @@ section#six {
 
   .left {
     background-color: $yellow;
-    width: 0px;
+    width: 50%;
     height: 40vw;
     position: relative;
     margin-right: 98px;
@@ -122,6 +122,10 @@ section#six {
         left: 50%;
         width: 75%;
         transform: translateX(-50%);
+      }
+
+      .car {
+        display: none;
       }
     }
   }

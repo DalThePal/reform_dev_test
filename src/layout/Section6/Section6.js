@@ -38,10 +38,13 @@ const Section6 = (props) => {
 
   useEffect(() => {
     if (!props.mobile) {
-      gsap.to('#six > .left', {
+      gsap.fromTo('#six > .left', {
+        width: "0%"
+      }, {
         duration: 1,
         width: '50%',
         scrollTrigger: '#six > .left > .dude',
+        clearProps: "all",
         onComplete: () => {
           dudeAnimation();
           carAnimation();

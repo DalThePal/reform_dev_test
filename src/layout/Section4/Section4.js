@@ -40,10 +40,13 @@ const Section4 = (props) => {
 
   useEffect(() => {
     if (!props.mobile) {
-      gsap.to('#four > .left', {
+      gsap.fromTo('#four > .left', {
+        width: '0%'
+      }, {
         duration: 1,
         width: '40%',
         scrollTrigger: '#four > .left > .phone',
+        clearProps: "all",
         onComplete: () => {
           phoneAnimation();
           h2Animation();

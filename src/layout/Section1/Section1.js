@@ -19,9 +19,12 @@ const Section1 = (props) => {
   }, [props.mobile]);
 
   const backgroundAnimation = () => {
-    gsap.to('#one', {
+    gsap.fromTo('#one', {
+      width: '0%'
+    }, {
       duration: 0.5,
       width: '100%',
+      clearProps: "all",
       onComplete: () => {
         phoneAnimation();
         textAnimation();
