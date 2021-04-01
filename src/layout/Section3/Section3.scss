@@ -1,0 +1,54 @@
+@import '../../variables.scss';
+
+section#three {
+  width: 100%;
+  padding: 0px 101px;
+  display: flex;
+  align-items: center;
+
+  .left {
+    width: 546px;
+    margin: 0px;
+    height: 300px;
+
+    h1 {
+      color: $dark-gray;
+      margin-bottom: 20px;
+      display: none;
+      top: -100px;
+      position: relative;
+      height: 196px;
+    }
+
+    p {
+      width: 338px;
+      position: relative;
+      top: -100px;
+      display: none;
+    }
+  }
+
+  .right {
+    height: 513px;
+    width: 0px;
+    background-image: url('../../assets/images/map.png');
+    position: relative;
+
+    .car {
+      position: absolute;
+      left: -50%;
+      bottom: -7%;
+      width: 500px;
+      height: 145px;
+      opacity: 0;
+    }
+
+    .phone {
+      position: absolute;
+      left: 50%;
+      top: -15%;
+      transform: translate(-25%, -50%);
+      opacity: 0;
+    }
+  }
+}

@@ -5,6 +5,7 @@ section#one {
   padding: 42px 101px;
   height: 740px;
   width: 0%;
+  
 
   .logo {
     width: 225px;
@@ -31,15 +32,10 @@ section#one {
 
     h1 {
       color: $white;
-      font-family: Bebas Neue;
       font-size: 145px;
-      font-style: normal;
-      font-weight: 400;
       line-height: 138px;
       letter-spacing: -4.103190898895264px;
       text-align: left;
-      text-transform: uppercase;
-      font-weight: bold;
     }
 
     span {

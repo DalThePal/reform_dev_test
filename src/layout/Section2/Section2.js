@@ -106,17 +106,16 @@ const Section2 = () => {
   }
   
   useEffect(() => {
-    gsap.to('.left', {
+    gsap.to('#two > .left', {
       duration: 0.5,
       width: '525px',
-      scrollTrigger: '.left',
-      marginLeft: 0,
+      scrollTrigger: '#two > .left',
       onComplete: () => {
         newCarAnimation(carIndex);
         arrowAnimation();
       }
     });
-  }, [])
+  }, []);
 
   let cars = CAR_DATA.map((item, index) => {
     return (

@@ -26,4 +26,22 @@ time, mark, audio, video {
   background-color: $white;
   display: flex;
   flex-direction: column;
+
+  section {
+    h1 {
+      font-family: Bebas Neue;
+      font-size: 95px;
+      line-height: 98px;
+      letter-spacing: -0.458235px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-family: Eina03;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: -0.470588px;
+    }
+  }
 }
