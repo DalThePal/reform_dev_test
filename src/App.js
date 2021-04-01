@@ -1,5 +1,8 @@
+import { useState } from 'react';
+
 import './App.scss';
 
+import Loading  from './layout/Loading';
 import Section1 from './layout/Section1';
 import Section2 from './layout/Section2';
 import Section3 from './layout/Section3';
@@ -9,7 +12,13 @@ import Section6 from './layout/Section6';
 import Footer   from './layout/Footer';
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
 
+  if (loading) {
+    return (
+      <Loading setLoading={setLoading}/>
+    )
+  }
   return (
     <div className="App">
       <Section1/>
