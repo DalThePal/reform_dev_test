@@ -45,3 +45,25 @@ time, mark, audio, video {
     }
   }
 }
+
+@media(max-width: 1100px) {
+  .App {
+    section {
+      h1 {
+        font-family: Bebas Neue;
+        font-size: 45px;
+        line-height: 48px;
+        letter-spacing: -0.217059px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+  
+      p {
+        font-family: Eina03;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.470588px;
+      }
+    }
+  }
+}
