@@ -77,3 +77,61 @@ section#one {
     }
   }
 }
+
+@media(max-width: 1100px) {
+  section#one { 
+    padding: 42px 19px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    .text {
+      margin-top: 40px;
+      position: initial;
+      opacity: 1;
+      width: 100%;
+
+      h1 {
+        font-size: 53px;
+        width: 100%;
+        line-height: 52px;
+        letter-spacing: -1.49979px;
+      }
+    }
+
+    .car-container {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      top: unset;
+      display: flex;
+      align-items: center;
+      height: 90px;
+      width: 100%;
+
+      .car {
+        position: absolute;
+
+        &.car1 {
+          width: 60%;
+          bottom: -17px;
+        }
+
+        &.car2 {
+          width: 50%;
+          bottom: -30px;
+        }
+    
+        &.car3 {
+          bottom: -34px;
+          z-index: 3;
+          width: 71%;
+          transform: translateX(20%);
+        }
+
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import {isMobile} from 'react-device-detect';
 import gsap from 'gsap';
 
 import logo from '../../assets/images/logo_white.png';
