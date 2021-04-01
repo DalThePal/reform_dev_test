@@ -101,6 +101,11 @@ section#one {
     width: 100%;
     position: relative;
 
+    .left {
+      width: auto;
+      height: 100%;
+    }
+
     .logo {
       width: 60vw;
       margin-bottom: 42px;
