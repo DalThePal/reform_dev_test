@@ -57,6 +57,7 @@ section#five {
     padding: 200px 0px 100px 0px;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
 
     .card {
       opacity: 1;

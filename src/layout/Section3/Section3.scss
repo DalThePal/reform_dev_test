@@ -86,7 +86,6 @@ section#three {
       background-size: 118%;
       background-position: right;
       background-repeat: no-repeat;
-      overflow-x: hidden;
       height: 410px;
 
       .phone {
@@ -95,6 +94,7 @@ section#three {
         top: 0;
         transform: translateX(-50%);
         opacity: 1;
+        height: 100%;
       }
     }
   }

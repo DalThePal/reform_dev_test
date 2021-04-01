@@ -48,6 +48,8 @@ time, mark, audio, video {
 
 @media(max-width: 900px) {
   .App {
+    width: 100vw;
+    overflow: hidden;
     section {
       h1 {
         font-family: Bebas Neue;
