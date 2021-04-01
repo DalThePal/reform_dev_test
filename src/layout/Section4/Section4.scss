@@ -48,3 +48,34 @@ section#four {
     }
   }
 }
+
+@media(max-width: 900px) {
+  section#four { 
+    padding: 200px 19px 0px 19px;
+    width: 100%;
+    flex-direction: column;
+
+    .right {
+      width: 100%;
+
+      h1, p {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    .left {
+      width: 80%;
+      height: 518px;
+      margin-right: 0px;
+      left: -18%;
+
+      .phone {
+        opacity: 1;
+        height: 80%;
+        width: auto;
+        top: 50%
+      }
+    }
+  }
+}
