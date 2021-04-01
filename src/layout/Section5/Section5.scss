@@ -1,0 +1,53 @@
+@import '../../variables.scss';
+
+section#five {
+  padding: 210px 101px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .card {
+    width: 453px;
+    height: 453px;
+    background-color: $card-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 86px 0px;
+    opacity: 0;
+    position: relative;
+    top: -20px;
+
+    h6 {
+      font-family: Bebas Neue;
+      font-size: 34px;
+      line-height: 88px;
+      letter-spacing: -0.164px;
+      color: $card-text;
+      font-weight: bold;
+    }
+
+    p {
+      font-family: Eina03;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.411765px;
+      color: $black;
+    }
+  
+    &.card-0 {
+      padding-left: 96px;
+      padding-right: 96px;
+    }
+    &.card-1 {
+      padding-left: 73px;
+      padding-right: 73px;
+    }
+    &.card-2 {
+      padding-left: 93px;
+      padding-right: 93px;
+    }
+
+  }
+}
