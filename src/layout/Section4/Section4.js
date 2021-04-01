@@ -50,7 +50,7 @@ const Section4 = (props) => {
         }
       });
     }
-  }, []);
+  }, [props.mobile]);
 
   return (
     <section id="four">

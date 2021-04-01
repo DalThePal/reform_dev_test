@@ -57,7 +57,7 @@ const Section5 = (props) => {
         }
       });
     }
-  });
+  }, [props.mobile]);
 
   let cards = CARD_DATA.map((item, index) => {
     return (

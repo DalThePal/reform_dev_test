@@ -56,7 +56,7 @@ const Section3 = (props) => {
         }
       })
     }
-  }, []);
+  }, [props.mobile]);
 
   return (
     <section id='three'>

@@ -124,7 +124,7 @@ const Section2 = (props) => {
         }
       });
     }
-  }, []);
+  }, [props.mobile]);
 
   let cars = CAR_DATA.map((item, index) => {
     return (

@@ -49,7 +49,7 @@ const Section6 = (props) => {
         }
       });
     }
-  }, []);
+  }, [props.mobile]);
 
   return (
     <section id="six">

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './App.scss';
 
@@ -13,7 +13,19 @@ import Footer   from './layout/Footer';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  let mobile = window.innerWidth < 1025 ? true : false;
+  const [mobile, setMobile] = useState(window.innerWidth < 1025);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMobile(window.innerWidth < 1025);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, [])
 
   if (loading) {
     return (

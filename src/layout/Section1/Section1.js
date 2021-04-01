@@ -16,7 +16,7 @@ const Section1 = (props) => {
       backgroundAnimation();
       carAnimation();
     }
-  }, []);
+  }, [props.mobile]);
 
   const backgroundAnimation = () => {
     gsap.to('#one', {
