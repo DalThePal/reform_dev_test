@@ -172,7 +172,7 @@ section#two {
       }
 
       .car-container {
-        width: 100%;
+        width: 50%;
         height: 100%;
 
         .desc {
@@ -194,6 +194,10 @@ section#two {
         left: 0px;
         bottom: -60px;
         position: absolute;
+
+        &.Porsche {
+          transform: scaleX(-1);
+        }
       }
     }
   }

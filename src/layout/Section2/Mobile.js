@@ -81,7 +81,7 @@ const Section2 = () => {
           </div>
 
         </div>
-        <img src={car.image} className={`car-image`}/>
+        <img src={car.image} className={`car-image ${car.make}`}/>
       </div>
 
     </section>
