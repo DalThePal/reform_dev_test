@@ -51,7 +51,7 @@ section#one {
 
       &::after {
         margin-left: 50px;
-        content: url('../../assets/images/arrow.png');
+        content: url('../../assets/images/arrow.svg');
       }
     }
   }
@@ -75,6 +75,11 @@ section#one {
 
       &.car1 {
         transform: translate(76%);
+      }
+
+      &.car2 {
+        transform: scaleX(-1) translate(21%);
+        width: 66%;
       }
     }
   }
@@ -122,8 +127,9 @@ section#one {
         }
 
         &.car2 {
-          width: 50%;
-          bottom: -30px;
+          width: 60%;
+          bottom: -32px;
+          transform: scaleX(-1) translate(7%);
         }
     
         &.car3 {

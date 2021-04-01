@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import arrow      from '../../assets/images/arrow.png';
+import arrow      from '../../assets/images/arrow.svg';
 import porsche    from '../../assets/images/car3.png';
 import landRover  from '../../assets/images/car4.png';
 

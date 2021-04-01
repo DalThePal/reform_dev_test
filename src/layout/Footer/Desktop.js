@@ -1,6 +1,6 @@
 import './Footer.scss';
 
-import logo from '../../assets/images/logo_black.png';
+import logo from '../../assets/images/logo_black.svg';
 
 const Footer = () => {
   return (
