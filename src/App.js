@@ -13,23 +13,25 @@ import Footer   from './layout/Footer';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  let mobile = window.innerWidth < 1024 ? true : false;
 
   if (loading) {
     return (
       <Loading setLoading={setLoading}/>
     )
+  } else {
+    return (
+      <div className="App">
+        <Section1 mobile={mobile}/>
+        <Section2 mobile={mobile}/>
+        <Section3 mobile={mobile}/>
+        <Section4 mobile={mobile}/>
+        <Section5 mobile={mobile}/>
+        <Section6 mobile={mobile}/>
+        <Footer mobile={mobile}/>
+      </div>
+    );
   }
-  return (
-    <div className="App">
-      <Section1/>
-      <Section2/>
-      <Section3/>
-      <Section4/>
-      <Section5/>
-      <Section6/>
-      <Footer/>
-    </div>
-  );
 }
 
 export default App;

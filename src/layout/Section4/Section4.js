@@ -9,7 +9,7 @@ import phone from '../../assets/images/section4_phone.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section4 = () => {
+const Section4 = (props) => {
 
   const phoneAnimation = () => {
     gsap.to('#four > .left > .phone', {
@@ -19,8 +19,8 @@ const Section4 = () => {
     });
   }
 
-  const h1Animation = () => {
-    gsap.to('#four > .right > h1', {
+  const h2Animation = () => {
+    gsap.to('#four > .right > h2', {
       duration: 0.5,
       top: '0px',
       opacity: 1,
@@ -39,15 +39,17 @@ const Section4 = () => {
   }
 
   useEffect(() => {
-    gsap.to('#four > .left', {
-      duration: 0.5,
-      width: '488px',
-      scrollTrigger: '#four > .left > .car',
-      onComplete: () => {
-        phoneAnimation();
-        h1Animation();
-      }
-    });
+    if (!props.mobile) {
+      gsap.to('#four > .left', {
+        duration: 0.5,
+        width: '40%',
+        scrollTrigger: '#four > .left > .phone',
+        onComplete: () => {
+          phoneAnimation();
+          h2Animation();
+        }
+      });
+    }
   }, []);
 
   return (
@@ -57,8 +59,8 @@ const Section4 = () => {
         <img src={phone} className="phone"/>
       </div>
       <div className="right">
-        <h1>trade in your car every month.</h1>
-        <p>Use Eleanor Trade-In Credits to trade in your vehicle for something else in our luxurious inventory.  Nothing says “June” like a new &nbsp;car!</p>
+        <h2>trade in your car every&nbsp;month.</h2>
+        <p>Use Eleanor Trade-In Credits to trade in your vehicle for something else in our luxurious inventory.  Nothing says “June” like a new&nbsp;car!</p>
       </div>
     </section>
   );

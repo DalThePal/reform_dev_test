@@ -28,7 +28,7 @@ const CARD_DATA = [
   }
 ]
 
-const Section5 = () => {
+const Section5 = (props) => {
 
   const cardAnimation = (index) => {
     gsap.to(`.card-${index}`, {
@@ -46,27 +46,27 @@ const Section5 = () => {
   }
 
   useEffect(() => {
-    gsap.to('.card-0', {
-      duration: 0.5,
-      opacity: 1,
-      top: '0px',
-      scrollTrigger: '.card-0',
-      onComplete: () => {
-        cardAnimation(1);
-      }
-    });
-  })
+    if (!props.mobile) {
+      gsap.to('.card-0', {
+        duration: 0.5,
+        opacity: 1,
+        top: '0px',
+        scrollTrigger: '.card-0',
+        onComplete: () => {
+          cardAnimation(1);
+        }
+      });
+    }
+  });
 
   let cards = CARD_DATA.map((item, index) => {
     return (
       <div className={`card card-${index}`}>
         <img src={item.image} />
-        <div>
-          <h6>{item.title}</h6>
-          <p>{item.text}</p>
-        </div>
+        <h6>{item.title}</h6>
+        <p>{item.text}</p>
       </div>
-    )
+    );
   });
 
   return (

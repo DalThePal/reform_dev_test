@@ -8,7 +8,7 @@ section#six {
   .left {
     background-color: $yellow;
     width: 0px;
-    height: 722px;
+    height: 40vw;
     position: relative;
     margin-right: 98px;
 
@@ -18,6 +18,7 @@ section#six {
       left: 0%;
       transform: translateX(-55%);
       opacity: 0;
+      width: 50%;
     }
 
     .car {
@@ -33,15 +34,10 @@ section#six {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 608px;
+    width: 50%;
     position: relative;
     opacity: 0;
     top: -5%;
-
-    h1 {
-      font-size: 93px;
-      margin-bottom: 20px;
-    }
 
     span {
       margin-top: 15px;
@@ -57,10 +53,11 @@ section#six {
       background-color: $card-background;
       width: 100%;
       border: none;
-      margin: 40px 0px;
+      margin: 2vw 0px;
     }
 
     .available {
+      margin-top: 0px;
       font-family: Eina03;
       font-size: 16px;
       line-height: 54px;
@@ -77,15 +74,19 @@ section#six {
     }
     
   }
+  h2 {
+    margin-bottom: 20px;
+  }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 1024px) {
   section#six { 
     padding: 0px 19px 50px 19px;
     flex-direction: column;
     align-items: center;
 
     .right {
+      order: 1;
       opacity: 1;
       top: unset;
       width: 100%;
@@ -103,52 +104,15 @@ section#six {
     }
 
     .left {
+      order: 2;
       width: calc(100% + 19px + 19px);
       margin-right: 0px;
-      height: 469px;
+      height: 120vw;
 
       .dude {
         opacity: 1;
         left: 50%;
         width: 75%;
-        transform: translateX(-50%);
-      }
-    }
-  }
-}
-
-@media(min-width: 701px) and (max-width: 1100px) {
-  section#six { 
-    padding: 0px 19px 50px 19px;
-    flex-direction: column;
-    align-items: center;
-
-    .right {
-      opacity: 1;
-      top: unset;
-      width: 100%;
-
-      h1 {
-        font-size: 45px;
-        line-height: 48px;
-        letter-spacing: -0.217059px;
-      }
-      .available {
-        margin-top: 0px;
-        line-height: 25px;
-        margin-bottom: 30px;
-      }
-    }
-
-    .left {
-      width: calc(100% + 19px + 19px);
-      margin-right: 0px;
-      height: 469px;
-
-      .dude {
-        opacity: 1;
-        left: 50%;
-        width: 38%;
         transform: translateX(-50%);
       }
     }

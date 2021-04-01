@@ -1,5 +1,3 @@
-import {isMobile} from 'react-device-detect';
-import Desktop  from './Desktop';
-import Mobile   from './Mobile';
+import Section1 from './Section1';
 
-export default isMobile ? Mobile : Desktop;
+export default Section1;

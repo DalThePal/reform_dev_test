@@ -1,7 +1,8 @@
 @import '../../variables.scss';
 
 footer {
-  padding: 33.5px 6.25vw 109px 6.25vw;
+  width: calc(100% - 6.25vw - 6.25vw);
+  padding: 33.5px 0 109px 0;
   border-top: 1px solid $card-background;
   display: flex;
   align-items: center;
@@ -25,8 +26,13 @@ footer {
   }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 1024px) {
   footer { 
-    padding: 33px 19px 40px 19px;
+    width: calc(100% - 19px - 19px);
+    padding: 33px 0 40px 0;
+
+    .logo {
+      width: 30vw;
+    }
   }
 }

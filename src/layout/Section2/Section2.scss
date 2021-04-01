@@ -1,16 +1,16 @@
 @import '../../variables.scss';
 
 section#two {
-  padding: 450px 6.25vw;
+  padding: 30vw 6.25vw;
   display: flex;
   align-items: center;
 
   .left {
     background-color: $yellow;
     width: 0px;
-    height: 661px;
-    padding-left: 129px;
-    padding-top: 181px;
+    height: 40vw;
+    padding-left: 6vw;
+    padding-top: 7vw;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,7 @@ section#two {
     .arrow-container {
       opacity: 0;
       position: absolute;
+      z-index: 4;
       top: 0;
       left: 0;
       display: flex;
@@ -39,6 +40,7 @@ section#two {
 
     .car-container {
       position: absolute;
+      width: 50%;
 
       .desc {
         position: relative;
@@ -47,25 +49,7 @@ section#two {
         align-items: flex-start;
         opacity: 0;
         top: initial;
-  
-        h4 {
-          font-family: Bebas Neue;
-          font-weight: bold;
-          font-size: 64px;
-          line-height: 75px;
-          color: $black;
-        }
-  
-        span {
-          color: $light-gray;
-          font-family: Bebas Neue;
-          font-style: normal;
-          font-weight: bold;
-          font-size: 17px;
-          line-height: 20px;
-          margin-bottom: 62px;
-        }
-  
+ 
         .item {
           display: flex;
           align-items: flex-end;
@@ -75,74 +59,67 @@ section#two {
           font-weight: bold;
           color: $dark-gray;
           margin-bottom: 10px;
-  
-          &::before {
-            margin-right: 30px;
-            width: 57px;
-            height: 22px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-          }
+          width: 70%;
           
-          &.mpg {  
-            &::before {
-              content: url('../../assets/images/mpg.png');
-            }
-          }
-          &.hp {
-            &::before {
-              content: url('../../assets/images/hp.png');
-            }
-          }
-          &.acc {
-            &::before {
-              content: url('../../assets/images/acc.png');
-            }
+          p {
+            font-size: 1vw;
+            margin-left: 1vw;
           }
         }
       }
-  
-      .car-image {
-        position: absolute;
-        bottom: -90%;
-        opacity: 0;
-      }
+    }
 
-      &.car-1 {
-        .car-image {
-          transform: scaleX(-1);
-        }
-      }
+    .image-1 {
+      transform: scaleX(-1);
+    }
+    
+
+    .car-image {
+      width: 55vw;
+      position: absolute;
+      bottom: -85px;
+      opacity: 0;
+    }
+
+    h4 {
+      color: $black;
+    }
+
+    span {
+      color: $light-gray;
+      font-family: Bebas Neue;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 20px;
+      margin-bottom: 62px;
     }
   }
 
   .right {
-    padding-left: 161px;
-    padding-top: 140px;
+    padding-left: 8vw;
+    padding-top: 3vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    height: 661px;
+    height: 40vw;
+    width: 60%;
+  }
+  h2 {
+    color: $dark-gray;
+    margin-bottom: 20px;
+  }
 
-    h1 {
-      width: 546px;
-      color: $dark-gray;
-      margin-bottom: 20px;
-    }
-
-    p {
-      width: 456px;
-     
-    }
+  p {
+    width: 60%;
   }
 }
 
 
-@media(max-width: 700px) {
+@media(max-width: 1024px) {
   section#two { 
-    padding: 130px 19px 0px 19px;
+    padding: 35vw 19px 0px 19px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,37 +131,62 @@ section#two {
       width: 100%;
       height: auto;
       margin-bottom: 25px;
+      order: 1;
 
-      h1, p {
+      h2, p {
         width: 100%;
       }
     }
 
     .left {
+      order: 2;
       width: 100%;
-      height: 340px;
-      padding-left: 30px;
-      padding-top: 22px;
+      height: 90vw;
+      padding-left: 7vw;
+      padding-top: 15vw;
       position: relative;
 
       .arrow-container {
         opacity: 1;
+        padding: 9vw 12vw;
+
+        img {
+          width: 10%;
+
+          &.next {
+            margin-left: 2vw;
+          }
+        }
       }
 
       .car-container {
-        width: 50%;
+        width: 55%;
         height: 100%;
 
         .desc {
           opacity: 1;
 
           h4 {
-            font-size: 40px;
-            line-height: 47px;
+            font-size: 10vw;
+            margin-bottom: 5vw;
           }
 
           span {
-            margin-bottom: 40px;
+            margin-bottom: 5vw;
+            font-size: 4.5vw;
+          }
+          .item {
+            font-size: 7vw;
+            margin-bottom: 3.5vw;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: start;
+
+            p {
+              font-size: 3vw;
+              width: 10vw;
+            }
           }
         }
       }
@@ -203,65 +205,3 @@ section#two {
   }
 }
 
-@media(min-width: 701px) and (max-width: 1100px) {
-  section#two { 
-    padding: 130px 19px 0px 19px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-    .right {
-      padding-top: 0px;
-      padding-left: 0px;
-      width: 100%;
-      height: auto;
-      margin-bottom: 25px;
-
-      h1, p {
-        width: 100%;
-      }
-    }
-
-    .left {
-      width: 100%;
-      height: 340px;
-      padding-left: 30px;
-      padding-top: 22px;
-      position: relative;
-
-      .arrow-container {
-        opacity: 1;
-      }
-
-      .car-container {
-        width: 50%;
-        height: 100%;
-
-        .desc {
-          opacity: 1;
-
-          h4 {
-            font-size: 40px;
-            line-height: 47px;
-          }
-
-          span {
-            margin-bottom: 40px;
-          }
-        }
-      }
-      .car-image {
-        opacity: 1;
-        width: 100%;
-        left: 0px;
-        bottom: -130px;
-        position: absolute;
-
-        &.Porsche {
-          transform: scaleX(-1);
-        }
-      }
-    }
-  }
-}

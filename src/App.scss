@@ -26,71 +26,72 @@ time, mark, audio, video {
   background-color: $white;
   display: flex;
   flex-direction: column;
-
+  align-items: center;
+  
   section {
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
+    width: 100%;
+
     h1 {
       font-family: Bebas Neue;
-      font-size: 95px;
-      line-height: 98px;
-      letter-spacing: -0.458235px;
+      font-size: 8vw;
+      line-height: 9vw;
+      letter-spacing: -4.1px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-family: Bebas Neue;
+      font-size: 5vw;
+      line-height: 5vw;
+      letter-spacing: -0.45px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    h4 {
+      font-family: Bebas Neue;
+      font-size: 4vw;
+      line-height: 4vw;
+      letter-spacing: -0.45px;
       font-weight: bold;
       text-transform: uppercase;
     }
 
     p {
       font-family: Eina03;
-      font-size: 16px;
+      font-size: 1.3vw;
       line-height: 26px;
       letter-spacing: -0.470588px;
     }
   }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 1024px) {
+
   .App {
-    width: 100vw;
     overflow: hidden;
     section {
-      h1 {
+      width: 100%;
+
+      h1, h2 {
         font-family: Bebas Neue;
-        font-size: 45px;
-        line-height: 48px;
+        font-size: 11vw;
+        line-height: 12vw;
         letter-spacing: -0.217059px;
         font-weight: bold;
         text-transform: uppercase;
       }
-  
+    
       p {
         font-family: Eina03;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: -0.470588px;
+        font-size: 3.5vw;
+        line-height: 5vw;
+        letter-spacing: -0.47px;
       }
     }
   }
 }
 
-@media(min-width: 701px) and (max-width: 1100px) {
-  .App {
-    width: 100vw;
-    overflow: hidden;
-    section {
-      margin-bottom: 100px;
-      h1 {
-        font-family: Bebas Neue;
-        font-size: 45px;
-        line-height: 48px;
-        letter-spacing: -0.217059px;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-  
-      p {
-        font-family: Eina03;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: -0.470588px;
-      }
-    }
-  }
-}

@@ -9,7 +9,7 @@ import car  from '../../assets/images/car1_better_resolution.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section6 = () => {
+const Section6 = (props) => {
 
   const dudeAnimation = () => {
     gsap.to('#six > .left > .dude', {
@@ -36,16 +36,18 @@ const Section6 = () => {
   }
 
   useEffect(() => {
-    gsap.to('#six > .left', {
-      duration: 0.5,
-      width: '637px',
-      scrollTrigger: '#six > .left',
-      onComplete: () => {
-        dudeAnimation();
-        carAnimation();
-        textAnimation();
-      }
-    });
+    if (!props.mobile) {
+      gsap.to('#six > .left', {
+        duration: 0.5,
+        width: '50%',
+        scrollTrigger: '#six > .left > .dude',
+        onComplete: () => {
+          dudeAnimation();
+          carAnimation();
+          textAnimation();
+        }
+      });
+    }
   }, []);
 
   return (
@@ -55,7 +57,7 @@ const Section6 = () => {
         <img src={car} className="car"/>
       </div>
       <div className="right">
-        <h1>Customers with that new car smell</h1>
+        <h2>Customers with that new car smell</h2>
         <p>“With Eleanor I was able to drive 2 of my dream cars this year!  The process is always easy and affordable!”</p>
         <span>Alex Bateman, Interface Designer</span>
         <hr/>

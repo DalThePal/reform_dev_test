@@ -5,6 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import arrow      from '../../assets/images/arrow.svg';
 import porsche    from '../../assets/images/car3.png';
 import landRover  from '../../assets/images/car4.png';
+import mpg        from '../../assets/images/mpg.svg';
+import hp         from '../../assets/images/hp.svg';
+import acc        from '../../assets/images/acc.svg';
 
 import './Section2.scss';
 
@@ -31,7 +34,7 @@ const CAR_DATA = [
   }
 ];
 
-const Section2 = () => {
+const Section2 = (props) => {
   const [carIndex, setCarIndex] = useState(0);
 
   const handlePrevClick = () => {
@@ -45,8 +48,10 @@ const Section2 = () => {
     }
 
     setCarIndex(index);
-    oldCarAnimation(prevIndex);
-    newCarAnimation(index);
+    if (!props.mobile) {
+      oldCarAnimation(prevIndex);
+      newCarAnimation(index);
+    }
   }
 
   const handleNextClick = () => {
@@ -60,8 +65,10 @@ const Section2 = () => {
     }
 
     setCarIndex(index);
-    oldCarAnimation(prevIndex);
-    newCarAnimation(index);
+    if (!props.mobile) {
+      oldCarAnimation(prevIndex);
+      newCarAnimation(index);
+    }
   }
 
   const oldCarAnimation = (index) => {
@@ -94,7 +101,7 @@ const Section2 = () => {
     {
       duration: 0.5,
       opacity: 1,
-      left: '0%',
+      left: '20%',
     });
   }
 
@@ -106,50 +113,65 @@ const Section2 = () => {
   }
   
   useEffect(() => {
-    gsap.to('#two > .left', {
-      duration: 0.5,
-      width: '525px',
-      scrollTrigger: '#two > .left',
-      onComplete: () => {
-        newCarAnimation(carIndex);
-        arrowAnimation();
-      }
-    });
+    if (!props.mobile) {
+      gsap.to('#two > .left', {
+        duration: 0.5,
+        width: '40%',
+        scrollTrigger: '#two > .left',
+        onComplete: () => {
+          newCarAnimation(carIndex);
+          arrowAnimation();
+        }
+      });
+    }
   }, []);
 
   let cars = CAR_DATA.map((item, index) => {
     return (
-      <div className={`car-container car-${index}`} key={index}>
-        <div className={`desc desc-${index}`}>
-          <h4>{item.make}</h4>
-          <span>{item.year} - {item.model}</span>
-          <p className="item mpg">{item.mpg}</p>
-          <p className="item hp">{item.hp}</p>
-          <p className="item acc">{item.acc}</p>
-        </div>
+      <>
+        <div className={`car-container car-${index}`} key={index}>
+          <div className={`desc desc-${index}`}>
+            <h4>{item.make}</h4>
+            <span>{item.year} - {item.model}</span>
+            <div className="item mpg">
+              <img src={mpg}/>
+              <p>MPG</p>
+              {item.mpg}
+            </div>
+            <div className="item hp">
+              <img src={hp}/>
+              <p>HP</p>
+              {item.hp}
+            </div>
+            <div className="item acc">
+              <img src={acc}/>
+              <p>0-60</p>
+              {item.acc}
+            </div>
+          </div>
 
+          {/* {!props.mobile && <img src={item.image} className={`car-image image-${index}`}/>} */}
+        </div>
         <img src={item.image} className={`car-image image-${index}`}/>
-      </div>
+      </>
     )
   })
 
   return (
     <section id="two">
       <div className="left">
-
         <div className="arrow-container">
           <img className="prev" src={arrow} onClick={handlePrevClick}/>
           <img className="next" src={arrow} onClick={handleNextClick}/>
         </div>
 
-        {cars}
+        {props.mobile ? cars[carIndex] : cars}
       </div>
 
       <div className="right">
-        <h1>select a vehicle from your phone.</h1>
+        <h2>select a vehicle from your phone.</h2>
         <p>Select from a wide range of luxury vehicles in our inventory. Drive it for a month, trade it the next for something else you have always wanted to&nbsp;own.</p>
       </div>
-
     </section>
   );
 }

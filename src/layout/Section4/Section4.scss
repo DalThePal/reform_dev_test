@@ -1,19 +1,19 @@
 @import '../../variables.scss';
 
 section#four {
-  padding: 400px 6.25vw 0px 6.25vw;
+  padding: 30vw 6.25vw 0px 6.25vw;
   display: flex;
   align-items: center;
 
   .left {
     background-color: $yellow;
     width: 0px;
-    height: 823px;
+    height: 60vw;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-right: 250px;
+    margin-right: 14vw;
 
     .car {
       width: 120%;
@@ -24,49 +24,51 @@ section#four {
       left: 52%;
       opacity: 0;
       top: -20%;
-      height: 725px;
-      width: 338px;
+      width: 70%;
       transform: translateY(-50%);
       box-shadow: 14px 18px 29px 11px rgba(0,0,0,0.28);
-      border-radius: 35px;
+      border-radius: 1.9vw;
     }
   }
 
   .right {
+    width: 60%;
+  }
 
-    h1 {
-      opacity: 0;
-      top: -100px;
-      position: relative;
-      width: 544px;
-      margin-bottom: 20px;
-    }
+  h2 {
+    opacity: 0;
+    top: -100px;
+    position: relative;
+    margin-bottom: 20px;
+  }
 
-    p {
-      position: relative;
-      top: -100px;
-      width: 397px;
-      opacity: 0;
-    }
+  p {
+    position: relative;
+    top: -100px;
+    width: 60%;
+    opacity: 0;
   }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 1024px) {
   section#four { 
     padding: 200px 19px 0px 19px;
     width: 100%;
     flex-direction: column;
 
     .right {
+      order: 1;
       width: 100%;
+      margin-bottom: -50px;
+    }
 
-      h1, p {
-        width: 100%;
-        opacity: 1;
-      }
+    h2, p {
+      width: 100%;
+      opacity: 1;
     }
 
     .left {
+      order: 2;
       width: 80%;
       height: 518px;
       margin-right: 0px;
@@ -74,44 +76,14 @@ section#four {
 
       .phone {
         opacity: 1;
-        height: 80%;
+        height: 70%;
         width: auto;
         top: 50%;
+        left: 100%;
         border-radius: 20px;
+        transform: translate(-50%, -50%);
       }
     }
   }
 }
 
-@media(min-width: 701px) and (max-width: 1100px) {
-  section#four { 
-    padding: 300px 19px 0px 19px;
-    width: 100%;
-    flex-direction: column;
-
-    .right {
-      width: 100%;
-
-      h1, p {
-        width: 100%;
-        opacity: 1;
-      }
-    }
-
-    .left {
-      width: 75%;
-      height: 518px;
-      margin-right: 0px;
-      left: -18%;
-
-      .phone {
-        left: 81%;
-        opacity: 1;
-        height: 80%;
-        width: auto;
-        top: 50%;
-        border-radius: 20px;
-      }
-    }
-  }
-}
