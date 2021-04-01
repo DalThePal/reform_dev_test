@@ -54,7 +54,23 @@ const Section2 = () => {
     setCarIndex(index);
   }
 
-  let car = CAR_DATA[carIndex];
+  let cars = CAR_DATA.map((item, index) => {
+    return (
+      <>
+        <div className={`car-container`} key={index}>
+          <div className={`desc`}>
+            <h4>{item.make}</h4>
+            <span>{item.year} - {item.model}</span>
+            <p className="item mpg">{item.mpg}</p>
+            <p className="item hp">{item.hp}</p>
+            <p className="item acc">{item.acc}</p>
+          </div>
+
+        </div>
+        <img src={item.image} className={`car-image ${item.make}`}/>
+      </>
+    );
+  });
 
   return (
     <section id="two">
@@ -71,17 +87,7 @@ const Section2 = () => {
           <img className="next" src={arrow} onClick={handleNextClick}/>
         </div>
 
-        <div className={`car-container`}>
-          <div className={`desc`}>
-            <h4>{car.make}</h4>
-            <span>{car.year} - {car.model}</span>
-            <p className="item mpg">{car.mpg}</p>
-            <p className="item hp">{car.hp}</p>
-            <p className="item acc">{car.acc}</p>
-          </div>
-
-        </div>
-        <img src={car.image} className={`car-image ${car.make}`}/>
+        {cars[carIndex]}
       </div>
 
     </section>
