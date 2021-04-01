@@ -1,0 +1,80 @@
+@import '../../variables.scss';
+
+section#six {
+  padding: 0px 6.25vw 77px 6.25vw;
+  display: flex;
+  flex-direction: row;
+
+  .left {
+    background-color: $yellow;
+    width: 0px;
+    height: 722px;
+    position: relative;
+    margin-right: 98px;
+
+    .dude {
+      position: absolute;
+      bottom: 0;
+      left: 0%;
+      transform: translateX(-55%);
+      opacity: 0;
+    }
+
+    .car {
+      position: absolute;
+      bottom: -20%;
+      left: 0%;
+      width: 160%;
+      opacity: 0;
+    }
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 608px;
+    position: relative;
+    opacity: 0;
+    top: -5%;
+
+    h1 {
+      font-size: 93px;
+      margin-bottom: 20px;
+    }
+
+    span {
+      margin-top: 15px;
+      font-family: Eina03;
+      font-size: 12px;
+      line-height: 26px;
+      letter-spacing: -0.352941px;
+      font-weight: bold;
+    }
+
+    hr {
+      height: 4px;
+      background-color: $card-background;
+      width: 100%;
+      border: none;
+      margin: 40px 0px;
+    }
+
+    .available {
+      font-family: Eina03;
+      font-size: 16px;
+      line-height: 54px;
+      letter-spacing: -0.470588px;
+      color: $gray;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      &::after {
+        margin-left: 50px;
+        content: url('../../assets/images/arrow.png');
+      }
+    }
+    
+  }
+}

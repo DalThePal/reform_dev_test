@@ -1,11 +1,14 @@
 import {useEffect} from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import './Section5.scss';
 
 import icon1 from '../../assets/images/icon-1.png';
 import icon2 from '../../assets/images/icon-2.png';
 import icon3 from '../../assets/images/icon-3.png';
-import gsap from 'gsap/gsap-core';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const CARD_DATA = [
   {
