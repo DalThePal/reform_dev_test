@@ -176,17 +176,7 @@ section#one {
     }
   
     .phone {
-      position: absolute;
-      z-index: 4;
-      width: 22.8vw;
-      height: 48.9vw;
-      top: 7%;
-      right: 0px;
-      opacity: 0;
-      background-image: url('../../assets/images/section1_phone.png');
-      background-size: contain;
-      box-shadow: -14px 18px 29px 11px rgba(0,0,0,0.28);
-      border-radius: 2.6vw;
+      display: none;
     }
   }
 }

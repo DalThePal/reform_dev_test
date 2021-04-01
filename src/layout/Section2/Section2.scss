@@ -52,17 +52,18 @@ section#two {
  
         .item {
           display: flex;
-          align-items: flex-end;
+          align-items: center;
           font-family: Bebas Neue;
           font-size: 31px;
           line-height: 36px;
           font-weight: bold;
           color: $dark-gray;
           margin-bottom: 10px;
-          width: 70%;
+          width: auto;
           
           p {
             font-size: 1vw;
+            width: 5vw;
             margin-left: 1vw;
           }
         }
