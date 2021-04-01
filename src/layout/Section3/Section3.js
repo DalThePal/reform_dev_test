@@ -58,6 +58,14 @@ const Section3 = (props) => {
           phoneAnimation();
         }
       })
+    } else {
+      gsap.set('#three > .left > h2', {
+        top: 'unset',
+        display: 'block'
+      })
+      gsap.set('#three > .right', {
+        width: 'calc(100% + 19px + 19px)'
+      })
     }
   }, [props.mobile]);
 

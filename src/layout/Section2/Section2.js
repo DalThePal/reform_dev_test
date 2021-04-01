@@ -127,6 +127,10 @@ const Section2 = (props) => {
           arrowAnimation();
         }
       });
+    } else {
+      gsap.set('#two > .left', {
+        width: '100%'
+      })
     }
   }, [props.mobile]);
 

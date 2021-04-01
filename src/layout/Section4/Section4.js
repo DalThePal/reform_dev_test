@@ -52,6 +52,10 @@ const Section4 = (props) => {
           h2Animation();
         }
       });
+    } else {
+      gsap.set('#four > .left', {
+        width: '80%'
+      })
     }
   }, [props.mobile]);
 

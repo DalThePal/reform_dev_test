@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import './App.scss';
 
@@ -17,7 +18,11 @@ const App = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setMobile(window.innerWidth < 1025);
+      let mobile = window.innerWidth < 1025
+      setMobile(mobile);
+      if (mobile) {
+        ScrollTrigger.getAll().forEach(ST => {ST.kill({revert: true})})
+      }
     }
 
     window.addEventListener('resize', handleResize);

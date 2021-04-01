@@ -56,6 +56,11 @@ const Section5 = (props) => {
           cardAnimation(1);
         }
       });
+    } else {
+      gsap.set('.card-0', {
+        top: 'unset',
+        opacity: 1
+      })
     }
   }, [props.mobile]);
 

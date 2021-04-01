@@ -51,6 +51,10 @@ const Section6 = (props) => {
           textAnimation();
         }
       });
+    } else {
+      gsap.set('#six > .left', {
+        width: "calc(100% + 19px + 19px)"
+      })
     }
   }, [props.mobile]);
 
