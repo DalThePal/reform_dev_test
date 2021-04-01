@@ -1,0 +1,26 @@
+@import '../../variables.scss';
+
+footer {
+  padding: 33.5px 6.25vw 109px 6.25vw;
+  border-top: 1px solid $card-background;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-between;
+
+    a {
+      cursor: pointer;
+      font-family: Eina03;
+      font-size: 11px;
+      line-height: 13px;
+      letter-spacing: -0.323529px;
+      color: $card-text;
+      font-weight: bold;
+    }
+  }
+}
