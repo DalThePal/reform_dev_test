@@ -24,3 +24,9 @@ footer {
     }
   }
 }
+
+@media(max-width: 900px) {
+  footer { 
+    padding: 33px 19px 40px 19px;
+  }
+}

@@ -1,3 +1,5 @@
-import Footer from './Footer';
+import {isMobile} from 'react-device-detect';
+import Desktop  from './Desktop';
+import Mobile   from './Mobile';
 
-export default Footer;
+export default isMobile ? Mobile : Desktop;
